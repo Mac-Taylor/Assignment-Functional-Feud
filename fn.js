@@ -70,6 +70,8 @@ function _map(array, func) {
     4. Come up with test cases and test function, add conditions until each
     test case has been satisfied and will pass.
     */
+
+
 }; // RIGHT NOW ONLY WRITTEN OUT IN STEPS
 
 //=======================================================================================
@@ -103,16 +105,15 @@ function _reduce(array, func, start){
 
     /* STEPS:
         1. define and understand the inputs of the function: an array of items to be '_reduce' 'd
-        by the function, the function 'func', then a 'start' value (I'm thinking it'll be zero) to 
+        by the function, the function 'func', then a 'start' value to 
         start the '_reduce' process.
             1a. 'func' sets the parameter by which we '_reduce' the array.
-        2. let start = 0.
-        3. run 'for' loop for every item in the array based on parameter defined in 'func'.
-        4. '_reduce' the items based on the parameter (I'm assuming an inequality will be used)
-        defined in 'func'. 
-            4a. splice() items out of the array based on the parameter defined in 'func' until
-            there is only one value remaining (maybe .length = 1 type of operation?)
-        5. return that number.
+        2. run 'for' loop for every item in the array based on parameter defined in 'func'.
+        3. '_reduce' the items based on the parameter defined in 'func'. In this case, pass 
+        two items into 'func', which should return only one value.
+        4. I feel like maybe the 'start' is now the new value returned from the two items
+        passed through 'func'? Ask luke.
+        5. return 
         6. Come up with test cases and test function, add conditions until each
         test case has been satisfied and will pass.
     */
@@ -160,14 +161,14 @@ function _some(array, func){
 
 //=======================================================================================
 
-function _find(){
+function _find(array, func){
+
     // CODE FUNCTION BASED ON THE STEPS BELOW
 
     /*STEPS:
     1. define and understand your inputs: an array of items, and a 'func' to 
     pass items in the array through.
-        1a. 'func' will need to set some sort of condition that itself returns a boolean
-        true/false return value.
+        1a. 'func' will need to return a boolean true/false return value.
     2. pass all items in the array through 'func' by calling the function within _all, 
     seems like this is the spot for a foor loop and indexing but also maybe .map().
     3. set conditions in '_find' to return the correct array item, in this case, the first item in the
