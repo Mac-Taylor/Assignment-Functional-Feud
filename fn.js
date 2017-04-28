@@ -164,10 +164,16 @@ function _find(){
     // CODE FUNCTION BASED ON THE STEPS BELOW
 
     /*STEPS:
-    1. 
-    2.
-    3.
-    4.
+    1. define and understand your inputs: an array of items, and a 'func' to 
+    pass items in the array through.
+        1a. 'func' will need to set some sort of condition that itself returns a boolean
+        true/false return value.
+    2. pass all items in the array through 'func' by calling the function within _all, 
+    seems like this is the spot for a foor loop and indexing but also maybe .map().
+    3. set conditions in '_find' to return the correct array item, in this case, the first item in the
+    array that satisfies the parameter defined in function 'func'. In this case, define a variabe to select
+    this item in the array, then return that variable.
+    4. return the first variable that satisfies the parameter set by 'func'.
     5. Come up with test cases and test function, add conditions until each
     test case has been satisfied and will pass.
 
