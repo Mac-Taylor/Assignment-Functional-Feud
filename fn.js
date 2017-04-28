@@ -90,6 +90,8 @@ function _filter(array, func) {
         array that return 'true' when passed through func (make sure to define a new variable
         that is an empty array inside the '_filter' function).
         4. Return new array of push() 'd values.
+        5. Come up with test cases and test function, add conditions until each
+        test case has been satisfied and will pass.
 
     */
 }; // RIGHT NOW ONLY WRITTEN IN STEPS
@@ -111,29 +113,64 @@ function _reduce(array, func, start){
             4a. splice() items out of the array based on the parameter defined in 'func' until
             there is only one value remaining (maybe .length = 1 type of operation?)
         5. return that number.
+        6. Come up with test cases and test function, add conditions until each
+        test case has been satisfied and will pass.
     */
-}
+} // RIGHT NOW ONLY WRITTEN IN STEPS
 
 //=======================================================================================
 
 function _all(array, func){
     // CODE FUNCTION BASED ON THE STEPS BELOW
 
-    
+    /* STEPS:
+    1. define and understand inputs: an array of items to passed through 'func', a function used
+    as a parameter in the '_all' function.
+        1a. 'func' will need to set some sort of condition that itself returns a boolean
+        true/false return value.
+    2. pass all items in the array through 'func' by calling the function within _all, 
+    seems like this is the spot for a foor loop and indexing but also maybe .map().
+    3. if all items in the array return 'true', then '_all' returns true.
+    4. if any items in the array do not return 'true', then '_all' returns false.
+    5. Come up with test cases and test function, add conditions until each
+    test case has been satisfied and will pass.
 
-}
+    */
+} // RIGHT NOW ONLY WRITTEN OUT IN STEPS
 
 //=======================================================================================
 
-function _some(){
+function _some(array, func){
+    // CODE FUNCTION BASED ON THE STEPS BELOW
 
-}
+    /* STEPS:
+    1. define and understand your inputs: an array of items, and a 'func' to 
+    pass items in the array through.
+        1a. 'func' will need to set some sort of condition that itself returns a boolean
+        true/false return value.
+    2. pass all items in the array through 'func' by calling the function within _all, 
+    seems like this is the spot for a foor loop and indexing but also maybe .map().
+    3. set conditions in '_some' function: if 1 or more items in the array return 'true' passed
+    through 'func', then return true. if none return true, '_some' should return false.
+    4. '_some' should return a boolean true/false. 
+    5. Come up with test cases and test function, add conditions until each
+    test case has been satisfied and will pass.
+    */
+} // RIGHT NOW ONLY WRITTEN OUT IN STEPS
 
 //=======================================================================================
 
 function _find(){
+    // CODE FUNCTION BASED ON THE STEPS BELOW
 
-}
+    /*STEPS:
+    1. 
+    2.
+    3.
+    4.
+    5. Come up with test cases and test function, add conditions until each
+    test case has been satisfied and will pass.
 
+} // RIGHT NOW ONLY WRITTEN OUT IN STEPS
 
 //=======================================================================================

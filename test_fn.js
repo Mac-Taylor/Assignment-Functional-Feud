@@ -10,3 +10,4 @@ test('range', function (t){
      t.deepEqual(fn.range(8, 4), null);
      t.deepEqual(fn.range(4, 4), [4]); // Not sure about this one, would rather it return null
 });
+
