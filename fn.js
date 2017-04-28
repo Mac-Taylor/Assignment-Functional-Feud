@@ -14,26 +14,27 @@ module.exports = {
 
 function range(min, max) {
 
-    let nmbrs = [];
+    let nmbrs = []; // empty array
 
     if (typeof(min) !== 'number') {
         return null;
-    }
+    } // if min isn't a number, return 'null'
 
      if (typeof(max) !== 'number') {
         return null;
-    }
+    } // if max isn't a number, return 'null' 
 
     if (min > max) {
         return null;
-    }
+    } // if min is greater than max the math won't work and there won't be a range
+      // return 'null'
 
     for (let i = min; i < max + 1; i++) {
         let current = i;
         nmbrs.push(current); 
-    }
+    } // for loop used to push range numbers to the array. 
 
-    return nmbrs;
+    return nmbrs; // once all numbers have been pushed return the array 'nmbrs'
 
 
     // Input: two numbers, Return Value: Array of Numbers
@@ -95,13 +96,30 @@ function _filter(array, func) {
 
 //=======================================================================================
 
-function _reduce(){
+function _reduce(array, func, start){
+    // CODE FUNCTION BASED ON STEPS BELOW
 
+    /* STEPS:
+        1. define and understand the inputs of the function: an array of items to be '_reduce' 'd
+        by the function, the function 'func', then a 'start' value (I'm thinking it'll be zero) to 
+        start the '_reduce' process.
+            1a. 'func' sets the parameter by which we '_reduce' the array.
+        2. let start = 0.
+        3. run 'for' loop for every item in the array based on parameter defined in 'func'.
+        4. '_reduce' the items based on the parameter (I'm assuming an inequality will be used)
+        defined in 'func'. 
+            4a. splice() items out of the array based on the parameter defined in 'func' until
+            there is only one value remaining (maybe .length = 1 type of operation?)
+        5. return that number.
+    */
 }
 
 //=======================================================================================
 
-function _all(){
+function _all(array, func){
+    // CODE FUNCTION BASED ON THE STEPS BELOW
+
+    
 
 }
 
@@ -114,7 +132,7 @@ function _some(){
 //=======================================================================================
 
 function _find(){
-    
+
 }
 
 
