@@ -70,9 +70,18 @@ function _map(array, func) {
     4. Come up with test cases and test function, add conditions until each
     test case has been satisfied and will pass.
     */
+    let rtrn = [];
 
+    for (let i = 0; i < array.length; i++) {
+        let currentItem = func(array[i]);
+        rtrn.push(currentItem);
+    }
 
-}; // RIGHT NOW ONLY WRITTEN OUT IN STEPS
+    return rtrn;
+
+}; 
+
+// RIGHT NOW ONLY WRITTEN OUT IN STEPS
 
 //=======================================================================================
 
@@ -108,12 +117,13 @@ function _reduce(array, func, start){
         by the function, the function 'func', then a 'start' value to 
         start the '_reduce' process.
             1a. 'func' sets the parameter by which we '_reduce' the array.
-        2. run 'for' loop for every item in the array based on parameter defined in 'func'.
-        3. '_reduce' the items based on the parameter defined in 'func'. In this case, pass 
-        two items into 'func', which should return only one value.
-        4. I feel like maybe the 'start' is now the new value returned from the two items
-        passed through 'func'? Ask luke.
-        5. return 
+        2. '_reduce' the items based on the parameter defined in 'func'. In this case, pass first
+        two items into 'func', which should return only one value as a result. 
+        3. run 'for' loop wherein you call 'func' 
+            3a. I feel like maybe the 'start' is now the new value returned from the two items
+            passed through 'func'? Cannot say for sure, ask about that.
+        4. repeat process until the array of items has been '_reduced' down to one item.
+        5. return the one remaining item.
         6. Come up with test cases and test function, add conditions until each
         test case has been satisfied and will pass.
     */
@@ -169,14 +179,14 @@ function _find(array, func){
     1. define and understand your inputs: an array of items, and a 'func' to 
     pass items in the array through.
         1a. 'func' will need to return a boolean true/false return value.
-    2. pass all items in the array through 'func' by calling the function within _all, 
+    2. pass all items in the array through 'func' by calling the function within _find, 
     seems like this is the spot for a foor loop and indexing but also maybe .map().
     3. set conditions in '_find' to return the correct array item, in this case, the first item in the
-    array that satisfies the parameter defined in function 'func'. In this case, define a variabe to select
+    array that satisfies the return value defined in function 'func'. In this case, define a variabe to select
     this item in the array, then return that variable.
     4. return the first variable that satisfies the parameter set by 'func'.
     5. Come up with test cases and test function, add conditions until each
-    test case has been satisfied and will pass.
+    test case has been satisfied and will pass. */
 
 } // RIGHT NOW ONLY WRITTEN OUT IN STEPS
 
