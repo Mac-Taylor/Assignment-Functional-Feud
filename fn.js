@@ -16,22 +16,22 @@ function range(min, max) {
 
     let nmbrs = []; // empty array
 
-    if (typeof(min) !== 'number') {
+    if (typeof (min) !== 'number') {
         return null;
     } // if min isn't a number, return 'null'
 
-     if (typeof(max) !== 'number') {
+    if (typeof (max) !== 'number') {
         return null;
     } // if max isn't a number, return 'null' 
 
     if (min > max) {
         return null;
     } // if min is greater than max the math won't work and there won't be a range
-      // return 'null'
+    // return 'null'
 
     for (let i = min; i < max + 1; i++) {
         let current = i;
-        nmbrs.push(current); 
+        nmbrs.push(current);
     } // for loop used to push range numbers to the array. 
 
     return nmbrs; // once all numbers have been pushed return the array 'nmbrs'
@@ -52,12 +52,14 @@ function range(min, max) {
 my test cases right now although kind of unclear on when min = max. Might come
 back to that. */
 
-console.log(range(10, 18)); 
+console.log(range(10, 18));
+
+// RIGHT NOW WRITTEN OUT IN STEPS AND CODE
 
 //=======================================================================================
 
 function _map(array, func) {
-   // CODE YOUR FUNCTION BASED ON THE STEPS BELOW
+    // CODE YOUR FUNCTION BASED ON THE STEPS BELOW
 
     /* Steps:
     1. define inputs: an arry, and a simple function to pass the array through.
@@ -79,9 +81,9 @@ function _map(array, func) {
 
     return rtrn;
 
-}; 
+};
 
-// RIGHT NOW ONLY WRITTEN OUT IN STEPS
+// RIGHT NOW WRITTEN OUT IN STEPS AND CODE 
 
 //=======================================================================================
 
@@ -103,13 +105,30 @@ function _filter(array, func) {
         4. Return new array of push() 'd values.
         5. Come up with test cases and test function, add conditions until each
         test case has been satisfied and will pass.
-
     */
-}; // RIGHT NOW ONLY WRITTEN IN STEPS
+    let kept = [];
+    for (let i = 0; i < array.length; i++) {
+        let current = array[i]
+        if (func(current) === true) {
+            kept.push(current);
+        } 
+    } return kept;
+}; 
+
+function greaterThanFive(nmbr) {
+    if (nmbr > 5) {
+        return true;
+    } else {
+        return false;
+    }
+}
+console.log(_filter([5, 4, 7, 8, 2, 1], greaterThanFive))
+
+// RIGHT NOW ONLY WRITTEN IN STEPS
 
 //=======================================================================================
 
-function _reduce(array, func, start){
+function _reduce(array, func, start) {
     // CODE FUNCTION BASED ON STEPS BELOW
 
     /* STEPS:
@@ -131,7 +150,7 @@ function _reduce(array, func, start){
 
 //=======================================================================================
 
-function _all(array, func){
+function _all(array, func) {
     // CODE FUNCTION BASED ON THE STEPS BELOW
 
     /* STEPS:
@@ -151,7 +170,7 @@ function _all(array, func){
 
 //=======================================================================================
 
-function _some(array, func){
+function _some(array, func) {
     // CODE FUNCTION BASED ON THE STEPS BELOW
 
     /* STEPS:
@@ -171,7 +190,7 @@ function _some(array, func){
 
 //=======================================================================================
 
-function _find(array, func){
+function _find(array, func) {
 
     // CODE FUNCTION BASED ON THE STEPS BELOW
 

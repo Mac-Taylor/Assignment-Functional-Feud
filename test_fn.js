@@ -7,12 +7,20 @@ function timesTwo(nmbr) {
     return nmbr * 2;
 }
 
-test('range', function (t){
-     t.deepEqual(fn.range(4, 8), [4, 5, 6, 7, 8]);
-     t.deepEqual(fn.range('r', 8), null);
-     t.deepEqual(fn.range(4, 'g'), null);
-     t.deepEqual(fn.range(8, 4), null);
-     t.deepEqual(fn.range(4, 4), [4]); // Not sure about this one, would rather it return null
+function greaterThanFive(nmbr) {
+    if (nmbr > 5) {
+        return true;
+    } else {
+        return false;
+    }
+}
+
+test('range', function (t) {
+    t.deepEqual(fn.range(4, 8), [4, 5, 6, 7, 8]);
+    t.deepEqual(fn.range('r', 8), null);
+    t.deepEqual(fn.range(4, 'g'), null);
+    t.deepEqual(fn.range(8, 4), null);
+    t.deepEqual(fn.range(4, 4), [4]); // Not sure about this one, would rather it return null
 });
 
 test('_map', function (t) {
@@ -20,4 +28,9 @@ test('_map', function (t) {
     t.deepEqual(fn._map([1, 2, 3], function (nmbr) {
         return nmbr * 2;
     }), [2, 4, 6]);
+    // COME BACK AND WRITE SOME MORE TEST CASES.
+});
+
+test('_filter' function (t) {
+    
 });
