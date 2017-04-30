@@ -7,8 +7,8 @@ function timesTwo(nmbr) {
     return nmbr * 2;
 }
 
-function greaterThanFive(nmbr) {
-    if (nmbr > 5) {
+function FiveOrLarger(nmbr) {
+    if (nmbr >= 5) {
         return true;
     } else {
         return false;
@@ -31,6 +31,11 @@ test('_map', function (t) {
     // COME BACK AND WRITE SOME MORE TEST CASES.
 });
 
-test('_filter' function (t) {
-    
+test('_filter', function (t) {
+    t.deepEqual(fn._filter([5, 4, 7, 8, 2, 1], FiveOrLarger), [5, 7, 8]);
+    t.deepEqual(fn._filter([1, 2, 3, 4, 5, 6, 7, 8], function even(x) {
+        return x % 2 === 0;
+    }), [2, 4, 6, 8]);
+    // COME BACK AND WRITE SOME TEST CASES 
 });
+

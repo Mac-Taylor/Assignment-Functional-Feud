@@ -52,8 +52,6 @@ function range(min, max) {
 my test cases right now although kind of unclear on when min = max. Might come
 back to that. */
 
-console.log(range(10, 18));
-
 // RIGHT NOW WRITTEN OUT IN STEPS AND CODE
 
 //=======================================================================================
@@ -114,15 +112,6 @@ function _filter(array, func) {
         } 
     } return kept;
 }; 
-
-function greaterThanFive(nmbr) {
-    if (nmbr > 5) {
-        return true;
-    } else {
-        return false;
-    }
-}
-console.log(_filter([5, 4, 7, 8, 2, 1], greaterThanFive))
 
 // RIGHT NOW ONLY WRITTEN IN STEPS
 
