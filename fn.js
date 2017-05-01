@@ -52,7 +52,7 @@ function range(min, max) {
 my test cases right now although kind of unclear on when min = max. Might come
 back to that. */
 
-// RIGHT NOW WRITTEN OUT IN STEPS AND CODE
+// NOW WRITTEN OUT IN STEPS AND CODE
 
 //=======================================================================================
 
@@ -81,7 +81,7 @@ function _map(array, func) {
 
 };
 
-// RIGHT NOW WRITTEN OUT IN STEPS AND CODE 
+// NOW WRITTEN OUT IN STEPS AND CODE 
 
 //=======================================================================================
 
@@ -109,11 +109,11 @@ function _filter(array, func) {
         let current = array[i]
         if (func(current) === true) {
             kept.push(current);
-        } 
+        }
     } return kept;
-}; 
+};
 
-// RIGHT NOW ONLY WRITTEN IN STEPS
+// NOW WRITTEN OUT IN STEPS AND CODE
 
 //=======================================================================================
 
@@ -135,7 +135,20 @@ function _reduce(array, func, start) {
         6. Come up with test cases and test function, add conditions until each
         test case has been satisfied and will pass.
     */
-} // RIGHT NOW ONLY WRITTEN IN STEPS
+
+    for (let i = start; i < array.length; i++) {
+        let runIt = func(array[start], array[start++]);
+        let runItAgain = func(array[start], array[start + 2]);
+        if (runIt === array[start]) {
+            return runItAgain;
+        } else {
+            return func(array[start++], array[start + 2]);
+        }
+
+    }
+}
+
+// RIGHT NOW WRITTEN IN STEPS AND CODE, BUT NEED TO COME BACK TO THIS ONE, ISN'T QUITE RIGHT.
 
 //=======================================================================================
 
@@ -155,7 +168,17 @@ function _all(array, func) {
     test case has been satisfied and will pass.
 
     */
-} // RIGHT NOW ONLY WRITTEN OUT IN STEPS
+
+    for (i = 0; i < array.length; i++) {
+        let satisfied = true;
+        let current = array[i];
+        if (func(current) !== true) {
+            satisfied === false;
+        }
+        return satisfied;
+    }
+}
+// NOW WRITTEN OUT IN STEPS AND CODE, BUT COMING BACK DOESN'T SEEM QUITE RIGHT
 
 //=======================================================================================
 
